@@ -1,9 +1,12 @@
 #!/bin/bash
+MY_PATH=$(readlink -f $0)
+MY_PATH=`dirname $MY_PATH`
+echo $MY_PATH
 COUNTER=0
 while [ $COUNTER -lt 4 ]; do
     let P=COUNTER+1
-    ./p-timer.sh 1 "Pomodoro $P/4" "Pomodoro started, you have 25 minutes" "Pomodoro ended." 
-    ./p-timer.sh 1 "Brake" "Short brake started (5 minutes)" "Brake ended.\nClick Yes to continue with the next Pomodoro"
+    $MY_PATH/p-timer.sh 1 "Pomodoro $P/4" "Pomodoro started, you have 25 minutes" "Pomodoro ended." 
+    $MY_PATH/p-timer.sh 1 "Brake" "Short brake started (5 minutes)" "Brake ended.\nClick Yes to continue with the next Pomodoro"
     if zenity --question --text "Continue?"; then
         echo "Ok, otro pomodoro"
         let COUNTER=COUNTER+1
