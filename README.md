@@ -8,4 +8,4 @@ little timer to work (hopefully increasing productivity).
 
 Notification:
 
-![afldf](notification.png)
+![Notification example](notification.png)
