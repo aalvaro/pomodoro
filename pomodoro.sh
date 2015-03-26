@@ -17,4 +17,4 @@ while [ $COUNTER -lt 4 ]; do
     fi
     let COUNTER=COUNTER+1
 done
-zenity --info --text="You've completed 4 pomodoros,\ntake a long brake (15-30 minutes).\n\nThen you can restart this cycle (it's not automatic)."
+zenity --info --text="You've completed 4 pomodori,\ntake a long brake (15-30 minutes).\n\nThen you can restart this cycle (it's not automatic)."
